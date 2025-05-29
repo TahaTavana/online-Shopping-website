@@ -2,6 +2,15 @@
   display: flex;
   justify-content: space-between;
   padding: 16px;
+  width: 75%;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin-top: 20px;
 }
 .nav-logo {
   display: flex;
