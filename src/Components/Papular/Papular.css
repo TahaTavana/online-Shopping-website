@@ -1,0 +1,28 @@
+.papular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    height: 90vh;
+
+}
+.papular h1{
+    color: #171717;
+    font-size: 50px;
+    font-weight:600;
+}
+.papular hr{
+    width: 200px;
+    height: 6px;
+    border-radius: 100px;
+    background: #252525;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+.papular-item{
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+}
