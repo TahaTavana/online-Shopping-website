@@ -5,8 +5,9 @@ import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
 const Navbar = () => {
-  const [Menu, setmenu] = useState('Shop')
+  const [Menu, setmenu] = useState('shop')
   const { GetTOtalCartItems } = useContext(ShopContext)
+  const navli=['shop','mens','womens','kids']
   return (
     <>
      <div className='navbar'>
@@ -15,11 +16,9 @@ const Navbar = () => {
         <p>Shopper</p>
       </div>
       <ul className='nav-menu'>
-        
-        <li onClick={()=>{setmenu("Shop")}}><Link to='/shop'>Shop</Link>{Menu==="Shop"?<hr/>:<></>}</li>
-        <li onClick={()=>{setmenu("Mens")}}><Link to='/mens'>Mens</Link>{Menu==="Mens"?<hr/>:<></>}</li>
-        <li onClick={()=>{setmenu("Womens")}}><Link to='/womens'>Womens</Link>{Menu==="Womens"?<hr/>:<></>}</li>
-        <li onClick={()=>{setmenu("Kids")}}><Link to='/kids'>Kids</Link>{Menu==="Kids"?<hr/>:<></>}</li>
+        {
+          navli.map((item,i)=>(<li key={i} onClick={()=>{setmenu(item)}}><Link to={`/${item}`}>{item}</Link>{Menu===item?<hr/>:<></>}</li>))
+        }
       </ul>
         <div className="nav-login-cart">
           <Link to='/login'><button>Login</button></Link>
@@ -31,8 +30,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
-
-// ##############################
- 
-
+export default Navbar;
