@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding: 16px;
   width: 75%;
-  margin: auto;
+  top: 5px;
   border: 1px solid black;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -11,6 +11,12 @@
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
   margin-top: 20px;
+  position: fixed;
+  left: 10%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .nav-logo {
   display: flex;
@@ -36,7 +42,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 10px;
   font-size: 25px;
   cursor: pointer;
 }
